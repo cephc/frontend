@@ -26,9 +26,7 @@ export default class SignUp extends React.Component {
             password: this.state.password,
             message: this.state.message
         };
-        // Check to see if that username is registered yet
-        Api.get("/users/username/" + user.username).then((res) => {
-            if (res.data.data === undefined) {
+
                 // send the data to the database
                 Api.post("/users", user).then(() => {
                     this.setState({message: "Profile created successfully! You may now sign in."});
