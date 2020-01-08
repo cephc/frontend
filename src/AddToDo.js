@@ -72,7 +72,7 @@ export default class AddToDo extends React.Component {
                                     </div>
                                    <div className="text-center">
                                        <button className="btn btn-primary mr-1" type="submit">Submit</button>
-                                       <LinkButton className="btn btn-secondary ml-1" to={"/account/"+ this.props.match.params.id}>Cancel</LinkButton>
+                                       <LinkButton className="btn btn-secondary ml-1" to={"/users/{username}/todos"}>Cancel</LinkButton>
                                    </div>
                                </form>
                            </div>
