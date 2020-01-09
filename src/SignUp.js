@@ -43,7 +43,7 @@ export default class SignUp extends React.Component {
     render() {
         return (
             <Card className="mt-4 mx-auto text-center" style={{maxWidth: "1000px"}}>
-                <h5 className="card-header text-center">Thank you for creating an account! Please enter your information
+                <h5 className="card-header text-center"> Create an account! Please enter your information
                     below to get started.</h5>
                 <div className="card-body">
                     <form name="form" onSubmit={this.handleSubmit}>
