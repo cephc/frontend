@@ -52,9 +52,11 @@ export default class SignUp extends React.Component {
                                 <label>Username</label>
                                 <input type="text" name="username" className="form-control" value={this.state.username || ''} onChange={this.handleChange}/>
                             </div>
+                            </div>
+                            <div className="form-row">
                             <div className="form-group col">
                               <select name={"role"} className={"form-control"} value={this.state.role || ''} onChange={this.handleChange}>
-                                          <option value={''}>Choose...</option>
+                                          <option value={''}>Choose...Privileges</option>
                                           <option value={"admin"}>Admin</option>
                                           <option value={"user"}>User</option>
 

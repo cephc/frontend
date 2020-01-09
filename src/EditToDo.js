@@ -3,7 +3,7 @@ import { Card } from "shards-react";
 import Api from "./utils/Api";
 import LinkButton from "./utils/LinkButton";
 
-export default class AddToDo extends React.Component {
+export default class EditToDo extends React.Component {
 
     constructor(props){
         super(props);
@@ -31,10 +31,10 @@ export default class AddToDo extends React.Component {
             status:this.state.status
             };
 
-         Api.post("/users/{username}/todos").then(() => {
-                            this.setState({message: "Task Created Successfully"});
+         Api.put("/users/{username}/todos").then(() => {
+                            this.setState({message: "Task Edited Successfully"});
                         }).catch(() => {
-                            this.setState({message: "It looks like there was an error creating this Task, please try again later."});
+                            this.setState({message: "It looks like there was an error editing this Task, please try again later."});
                         });
 
         event.preventDefault();
@@ -43,7 +43,7 @@ export default class AddToDo extends React.Component {
     render() {
        return (
            <Card className="mt-4 mx-auto text-center" style={{maxWidth: "1000px"}}>
-                           <h5 className="card-header text-center">Please enter to-do details below.</h5>
+                           <h5 className="card-header text-center">Please edit to-do details below.</h5>
                            <div className="card-body">
                                <form name="form" onSubmit={this.handleSubmit}>
                                    <div className="form-row">
