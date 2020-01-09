@@ -32,11 +32,8 @@ export default class SignUp extends React.Component {
                     this.setState({message: "Profile created successfully! You may now sign in."});
                 }).catch(() => {
                     this.setState({message: "It looks like there was an error creating your profile, please try again later."});
-                });
-            } else {
-                this.setState({message: "This Username has already been registered, please sign in."});
-            }
-        }).catch((err) => {
+
+              this.catch((err) => {
             this.setState({message: "It looks like there was an error fetching data, please try again later."});
             console.log(err);
         });
