@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 import { Card } from "shards-react";
 
-export default class SignUp extends React.Component {
+export default class SignIn extends React.Component {
     constructor(props) {
         super(props);
         this.state = {username: ''};
@@ -20,7 +20,7 @@ export default class SignUp extends React.Component {
 
     handleSubmit(event) {
         // Get the data from the form to send to the database
-        const user = {
+        /*const user = {
             username: this.state.username,
             role: this.state.role,
             password: this.state.password,
@@ -33,7 +33,7 @@ export default class SignUp extends React.Component {
         }).catch(() => {
             this.setState({message: "It looks like there was an error creating your profile, please try again later."});
         });
-        event.preventDefault();
+        event.preventDefault();*/
     }
 
     handleChange(event) {
@@ -42,7 +42,7 @@ export default class SignUp extends React.Component {
 
     render() {
         return (
-            <Card className="mt-4 mx-auto text-center" style={{maxWidth: "1000px"}}>
+            /*<Card className="mt-4 mx-auto text-center" style={{maxWidth: "1000px"}}>
                 <h5 className="card-header text-center">Thank you for creating an account! Please enter your information
                     below to get started.</h5>
                 <div className="card-body">
@@ -53,12 +53,12 @@ export default class SignUp extends React.Component {
                                 <input type="text" name="username" className="form-control" value={this.state.username || ''} onChange={this.handleChange}/>
                             </div>
                             <div className="form-group col">
-                              <select name={"role"} className={"form-control"} value={this.state.role || ''} onChange={this.handleChange}>
-                                          <option value={''}>Choose...</option>
-                                          <option value={"admin"}>Admin</option>
-                                          <option value={"user"}>User</option>
+                                <select name={"role"} className={"form-control"} value={this.state.role || ''} onChange={this.handleChange}>
+                                    <option value={''}>Choose...</option>
+                                    <option value={"admin"}>Admin</option>
+                                    <option value={"user"}>User</option>
 
-                                 </select>
+                                </select>
                             </div>
                         </div>
 
@@ -77,7 +77,8 @@ export default class SignUp extends React.Component {
                 <div className="card-footer">
                     {this.state.message}
                 </div>
-            </Card>
+            </Card>*/
+            <React.Fragment>Put the sign in page here.</React.Fragment>
         );
     }
 }
