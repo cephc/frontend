@@ -9,7 +9,7 @@ export default class SignIn extends React.Component {
     constructor(props) {
         super(props);
         this.state = {username: ''};
-        this.state = {role: ''};
+        // this.state = {role: ''};
         this.state = {password: ''};
         this.state = {message: ''};
 
@@ -20,9 +20,9 @@ export default class SignIn extends React.Component {
 
     handleSubmit(event) {
         // Get the data from the form to send to the database
-        /*const user = {
+        const user = {
             username: this.state.username,
-            role: this.state.role,
+            // role: this.state.role,
             password: this.state.password,
             message: this.state.message
         };
@@ -33,7 +33,7 @@ export default class SignIn extends React.Component {
         }).catch(() => {
             this.setState({message: "It looks like there was an error creating your profile, please try again later."});
         });
-        event.preventDefault();*/
+        event.preventDefault();
     }
 
     handleChange(event) {
@@ -42,9 +42,8 @@ export default class SignIn extends React.Component {
 
     render() {
         return (
-            /*<Card className="mt-4 mx-auto text-center" style={{maxWidth: "1000px"}}>
-                <h5 className="card-header text-center">Thank you for creating an account! Please enter your information
-                    below to get started.</h5>
+            <Card className="mt-4 mx-auto text-center" style={{maxWidth: "1000px"}}>
+                <h5 className="card-header text-center">Please log in!</h5>
                 <div className="card-body">
                     <form name="form" onSubmit={this.handleSubmit}>
                         <div className="form-row">
@@ -52,14 +51,14 @@ export default class SignIn extends React.Component {
                                 <label>Username</label>
                                 <input type="text" name="username" className="form-control" value={this.state.username || ''} onChange={this.handleChange}/>
                             </div>
-                            <div className="form-group col">
+                            {/* <div className="form-group col">
                                 <select name={"role"} className={"form-control"} value={this.state.role || ''} onChange={this.handleChange}>
                                     <option value={''}>Choose...</option>
                                     <option value={"admin"}>Admin</option>
                                     <option value={"user"}>User</option>
 
                                 </select>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="form-row">
@@ -69,16 +68,15 @@ export default class SignIn extends React.Component {
                             </div>
                         </div>
                         <div className="text-center">
-                            <button className="btn btn-primary mr-1" type="submit">Register</button>
-                            <LinkButton className="btn btn-secondary ml-1" to={'/signin'}>Cancel</LinkButton>
+                            <button className="btn btn-primary mr-1" type="submit">Login</button>
+                            <LinkButton className="btn btn-secondary ml-1" to={'/signup'}>Sign Up</LinkButton>
                         </div>
                     </form>
                 </div>
                 <div className="card-footer">
                     {this.state.message}
                 </div>
-            </Card>*/
-            <React.Fragment>Put the sign in page here.</React.Fragment>
+            </Card>
         );
     }
 }
