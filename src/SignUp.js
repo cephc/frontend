@@ -43,8 +43,7 @@ export default class SignUp extends React.Component {
     render() {
         return (
             <Card className="mt-4 mx-auto text-center" style={{maxWidth: "1000px"}}>
-                <h5 className="card-header text-center"> Create an account! Please enter your information
-                    below to get started.</h5>
+                <h5 className="card-header text-center">Please create an account below to get started!</h5>
                 <div className="card-body">
                     <form name="form" onSubmit={this.handleSubmit}>
                         <div className="form-row">
@@ -52,15 +51,15 @@ export default class SignUp extends React.Component {
                                 <label>Username</label>
                                 <input type="text" name="username" className="form-control" value={this.state.username || ''} onChange={this.handleChange}/>
                             </div>
-                            </div>
-                            <div className="form-row">
+                        </div>
+                        <div className="form-row">
                             <div className="form-group col">
-                              <select name={"role"} className={"form-control"} value={this.state.role || ''} onChange={this.handleChange}>
-                                          <option value={''}>Choose...Privileges</option>
-                                          <option value={"admin"}>Admin</option>
-                                          <option value={"user"}>User</option>
+                                <select name={"role"} className={"form-control"} value={this.state.role || ''} onChange={this.handleChange}>
+                                    <option value={''}>Choose...Privileges</option>
+                                    <option value={"admin"}>Admin</option>
+                                    <option value={"user"}>User</option>
 
-                                 </select>
+                                </select>
                             </div>
                         </div>
 
@@ -71,8 +70,8 @@ export default class SignUp extends React.Component {
                             </div>
                         </div>
                         <div className="text-center">
-                            <button className="btn btn-primary mr-1" type="submit">Register</button>
-                            <LinkButton className="btn btn-secondary ml-1" to={'/signin'}>Cancel</LinkButton>
+                            <button className="btn btn-primary mr-1" type="submit">Submit</button>
+                            <LinkButton className="btn btn-secondary ml-1" to={'/signin'}>Back to Sign In</LinkButton>
                         </div>
                     </form>
                 </div>
